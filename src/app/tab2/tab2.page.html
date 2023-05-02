@@ -1,9 +1,72 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tab Two
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>
+            Add New Media
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label position="floating"> Title : </ion-label>
+            <ion-input type="text" id="mTitle" required [(ngModel)]=newTitle name="mTitle"></ion-input>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label position="floating"> Author: </ion-label>
+            <ion-input type="text" id="mAuthor" required [(ngModel)]=newAuthor name="mAuthor"></ion-input>
+        </ion-item>
+
+        <ion-item>
+
+            <ion-label position="floating"> Publisher: </ion-label>
+            <ion-input type="text" id="mPublisher" required [(ngModel)]=newPublisher name="mPublisher"></ion-input>
+        </ion-item>
+
+
+        <ion-list lines="none">
+        
+            <ion-radio-group required [(ngModel)]=newRadio>
+                <ion-list-header> Media Type: </ion-list-header>
+
+                <ion-item>
+                    <ion-label> <small>Video</small> </ion-label>
+                    <ion-radio value="Video"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label> <small>Game</small> </ion-label>
+                    <ion-radio value="Game"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label> <small>Music</small> </ion-label>
+                    <ion-radio value="Music"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label> <small>Other</small> </ion-label>
+                    <ion-radio value="Other"></ion-radio>
+                </ion-item>
+
+
+            </ion-radio-group>
+       
+        </ion-list>
+        <ion-item>
+            <ion-label position="floating" > Notes: </ion-label>
+            <ion-input type="text" id="mNotes" required [(ngModel)]=newNotes name="mNotes"></ion-input>
+        </ion-item>
+
+        <br /><br />
+
+
+        <ion-button size="small" (click)="add()"> Add Media </ion-button>
+        
+        <ion-button size ="small" color="light" (click)="help()"> Help </ion-button>
+
+        
+        <p style="color:red;">{{message}}</p>
+    </ion-list>
+
+</ion-content>

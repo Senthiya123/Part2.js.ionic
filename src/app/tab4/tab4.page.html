@@ -1,0 +1,80 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Browse and Edit Media</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <p>Current Title: {{currentTitle}}</p>
+    <ion-list lines="none">
+
+        <ion-item>
+            <ion-label position="floating"> Current Author: </ion-label>
+            <ion-input ype="text" id="mAuthor" required [(ngModel)]=currentAuthor name="mAuthor"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating"> Current Publisher: </ion-label>
+            <ion-input type="text" id="mPublisher" required [(ngModel)]=currentPublisher name="mPublisher"></ion-input>
+        </ion-item>
+
+
+        <ion-list lines="none">
+
+            <ion-radio-group [(ngModel)]=currentType>
+                <ion-list-header> Media Type: </ion-list-header>
+
+                <ion-item>
+                    <ion-label> <small>Video</small> </ion-label>
+                    <ion-radio value="Video"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label> <small>Game</small> </ion-label>
+                    <ion-radio value="Game"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label> <small>Music</small> </ion-label>
+                    <ion-radio value="Music"></ion-radio>
+                </ion-item>
+                <ion-item>
+                    <ion-label> <small>Other</small> </ion-label>
+                    <ion-radio value="Other"></ion-radio>
+                </ion-item>
+
+
+            </ion-radio-group>
+
+        </ion-list>
+
+        <ion-item>
+            <ion-label position="floating"> Current Notes:  </ion-label>
+            <ion-input type="text" id="mNotes" required [(ngModel)]=currentNotes name="mNotes"></ion-input>
+        </ion-item>
+
+        <ion-button size="small" (click)="doPrev()"> Prev </ion-button>
+        <ion-button size="small" (click)="doNext()"> Next </ion-button>
+        <ion-button size="small" (click)="doUpdate()"> Update </ion-button>
+        <ion-button size="small" (click)="doDelete()"> Delete </ion-button>
+
+       
+
+            <ion-button size="small" color="light" (click)="help()"> Help </ion-button>
+
+            <ion-item> <p style="color:red;">{{message}}</p> </ion-item>
+
+    </ion-list>
+
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+

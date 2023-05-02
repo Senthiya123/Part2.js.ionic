@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-title>Search for Media</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list lines="none">
+        <ion-item>
+            <ion-label position="floating"> Search Title: </ion-label>
+            <ion-input type="text" id="sTitle" required [(ngModel)]=currentTitle name="sTitle"></ion-input>
+        </ion-item>
+
+        <ion-button size="small" (click)="doSearch()"> Search </ion-button>
+        <ion-item><p style="color:red;">{{message}}</p></ion-item>
+
+        <ion-item>
+            <ion-label position="floating"> Author: </ion-label>
+            <ion-input type="text" id="mAuthor" required [(ngModel)]=currentAuthor name="mAuthor"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating"> Publisher: </ion-label>
+            <ion-input type="text" id="mPublisher" required [(ngModel)]=currentPublisher name="mPublisher"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating"> Media Type: </ion-label>
+            <ion-input type="text" id="mType" required [(ngModel)]=currentType name="mType"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating"> Notes: </ion-label>
+            <ion-input type="text" id="mNotes" required [(ngModel)]=currentNotes name="mNotes"></ion-input>
+        </ion-item>
+
+        <ion-button size="small" (click)="help()"> Help </ion-button>
+
+
+    </ion-list>
+
+</ion-content>
+
+
+
+   
+    
+   
+    
+   

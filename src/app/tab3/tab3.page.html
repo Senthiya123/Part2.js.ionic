@@ -1,9 +1,28 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Three
+      Media List
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content padding>
+    <ion-list>
+
+
+        <ul style="list-style-type:none">
+            <li *ngFor="let md of data">Title= {{md.title}} , Author={{md.author}}, Publisher={{md.publisher}}, Type={{md.type}}, Notes={{md.notes}} </li>
+        </ul>
+        <ion-button size="small" color="light" (click)="help()"> Help </ion-button>
+
+        
+
+        <p style="color:red;">{{message}}</p>
+
+
+
+
+        
+    </ion-list>
+
+</ion-content>

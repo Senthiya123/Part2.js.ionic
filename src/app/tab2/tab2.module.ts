@@ -5,6 +5,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 
+import { StudentService, Media } from '../student.service';
+
+
 @NgModule({
   imports: [
     IonicModule,
@@ -14,4 +17,21 @@ import { Tab2Page } from './tab2.page';
   ],
   declarations: [Tab2Page]
 })
-export class Tab2PageModule {}
+export class Tab2PageModule {
+    newTitle: string;
+    newAuthor: string;
+    newPublisher: string;
+    newType: string;
+    newNotes: string;
+
+    message: string;
+
+    data: [Media];
+
+
+
+    constructor(private medias: StudentService) { }
+    
+    
+}
+
